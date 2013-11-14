@@ -1,14 +1,99 @@
-<!--
-To change this template, choose Tools | Templates
-and open the template in the editor.
--->
-<!DOCTYPE html>
+<head>
+<style type="text/css" media="screen">
+a:link, a:visited 
+	{
+	color: maroon;
+	text-decoration: none
+	}
+
+a:hover 
+	{
+	color: red;
+	text-decoration: none
+	}
+
+#main{
+	height: 100%;
+	width: 100%;
+	display: table;
+}
+
+#middle, #footer{
+	text-align: center;
+	font-family: tahoma;
+	font-size: 25px;
+}
+
+#top{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	display: block;
+	text-align: center;
+	background: grey;
+}
+#middle{
+	valign: middle;
+	vertical-align: middle;
+	display: table-cell;
+}
+
+#footer{
+	position: absolute;
+	bottom: 10px;
+	left: 0px;
+	width: 100%;
+	display: block
+}
+</style>
+
+<!--[if IE]>
+<style type="text/css">
+		#main{
+			padding-top: 15%; /* IE doesn't handle the CSS properly so need to hackily get the position correct */
+		}
+		#top, #footer{
+			width: 101.999%; /* IE has a slightly narrower viewport, this makes it almost page width */
+			}
+</style>
+<![endif]-->
+
+</style>
+</head>
+
+<div id="top">
+	&nbsp;
+</div>
+
 <html>
-    <head>
-        <title></title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
+
+<div id="top">
+	&nbsp;
+</div>
+
+<body>
+
+<div id="main">
+    <div id="middle">
+		<a href="http://www.youtube.com/watch?v=PlJMCOazRO8" target="blank">Almost Live - Bridge Engineer Intro</a><br />
+		<br />
+		This website is hosted with <a href="https://drive.google.com/#my-drive" target="_blank">Google Drive</a><br />
+        <br />
+        DNS managed through <a href="http://freedns.afraid.org/" target="_blank">http://freedns.afraid.org/</a><br />
+        <br />
+        Domain hosted with <a href="http://www.bluehost.com/" target="_blank">http://www.bluehost.com/</a><br />
+        <br />
+        Page edited with <a href="https://shiftedit.net/" target="_blank">https://shiftedit.net/</a><br />
+        <br />
+		<a href="https://docs.google.com/file/d/0Byr9ypa9wndUQ0Z5WDBiTWNWWDA/view" target="blank">This page's source code</a><br />
+		<br />
+    </div> <!-- end middle -->
+</div> <!-- end main -->
+
+<div id="footer">
+	<a href="mailto:me@jensbodal.com">Contact Me</a>
+</div> <!-- end footer -->
+
+</body>
 </html>
