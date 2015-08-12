@@ -29,6 +29,7 @@ set fileencodings=ucs-bom,utf-8,default,latin1
 set helplang=en
 set history=50
 set nomodeline
+set printoptions=paper:letter
 set ruler
 set rulerformat=%50(%=col:\ %c\ row:\ %l\ (%p%%)\ [%f]%)
 set runtimepath=~/.vim,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim74,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,~/.vim/after
@@ -51,8 +52,8 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +0 index.html
-badd +0 assets/css/main.css
+badd +1 index.html
+badd +1 assets/css/main.css
 args index.html
 edit index.html
 set splitbelow splitright
@@ -162,11 +163,11 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 75 - ((66 * winheight(0) + 38) / 77)
+let s:l = 76 - ((11 * winheight(0) + 38) / 76)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-75
+76
 normal! 076|
 tabedit assets/css/main.css
 set splitbelow splitright
@@ -276,13 +277,13 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 38) / 76)
+let s:l = 64 - ((63 * winheight(0) + 38) / 76)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-1
-normal! 0
-tabnext 2
+64
+normal! 09|
+tabnext 1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf
 endif
