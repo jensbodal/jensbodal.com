@@ -1,3 +1,5 @@
+<!-- Taken from http://isometriks.com/verify-github-webhooks-with-php -->
+
 <?php
 require('/var/www/scripts/jensbodal.com/keys.php');
 
@@ -19,9 +21,12 @@ if ($hash !== $payloadHash) {
     die('Bad secret');
 }
  
-// Your code here.
+// executable code here
+
+// currently don't care about the json data from the github POST request
 $data = json_decode($payload);
 
+// grab most recent pdf and generate thumbnail
 exec('/var/www/scripts/jensbodal.com/pdf.sh');
 
 ?>
